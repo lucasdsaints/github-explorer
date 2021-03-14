@@ -1,14 +1,60 @@
-section.repository-list {
+.repository-container {
+  $main-color: #8257e6;
+  $main-color-dark: #6339c4;
+
   margin: 40px;
+  max-width: 800px;
+  margin: 50px auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 150px;
+    width: 100vw;
+    background-color: $main-color-dark;
+    top: 0;
+    z-index: -1;
+  }
   
   h1 {
     margin-bottom: 16px;
+    color: #fff;
+  }
+
+  .search-box {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+
+    border: 1px solid $main-color;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    input, select {
+      border: 1px solid $main-color;
+      border-radius: 50px;
+      padding: 10px 20px;
+      flex: 1;
+      margin: 0 10px;
+    }
   }
 
   ul {
     list-style: none;
 
     li {
+      border: 1px solid $main-color;
+      padding: 20px;
+      border-radius: 10px;
+
       &:not(:first-child) {
         margin-top: 20px;
       }
@@ -23,7 +69,7 @@ section.repository-list {
         display: inline-block;
         margin-top: 16px;
         text-decoration: none;
-        color: #8257e6;
+        color: $main-color;
       }
     }
   }
