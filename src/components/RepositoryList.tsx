@@ -29,7 +29,7 @@ export function RepositoryList() {
 
   return (
     <div className="repository-container">
-      <h1>Busca de repositórios GitHub</h1>
+      <h1>GitHub Explorer</h1>
 
       <div className="search-box">
         <input
